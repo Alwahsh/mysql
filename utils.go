@@ -84,6 +84,10 @@ func getTLSConfigClone(key string) (config *tls.Config) {
 	return
 }
 
+func cloneTLSConfig(c *tls.Config) *tls.Config {
+	return c.Clone()
+}
+
 // Returns the bool value of the input.
 // The 2nd return value indicates if the input was a valid bool value
 func readBool(input string) (value bool, valid bool) {
