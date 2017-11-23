@@ -77,8 +77,6 @@ func DeregisterTLSConfig(key string) {
 
 func getTLSConfigClone(key string) (config *tls.Config) {
 	tlsConfigLock.RLock()
-	if v, ok := tlsConfigRegister[key]; ok {
-	}
 	tlsConfigLock.RUnlock()
 	return
 }
